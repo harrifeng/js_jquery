@@ -1,1 +1,8 @@
 * Chapter 1 : Writing Your First JavaScript Program
+* Chapter 2 : The Grammar of JavaScript
+** Statements
+   + 对于javascript来说statement就是最小的编程单位了.这个和Java倒是真的一样
+   + statement最后那个分号不要省略,虽然可以省略
+** Built-In Functions
+   + 
+
