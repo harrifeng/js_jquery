@@ -54,19 +54,35 @@
         margin-left: 50px;	
     }
   </style>
+  <!-- <script type="text/javascript"> -->
+  <!--   $(document).ready(function() { -->
+  <!--       $('#open').click(function() { -->
+  <!--           $('#login form').slideToggle(300); -->
+  <!--           $(this).toogleClass('close'); -->
+  <!--       }); //end click -->
+  <!--   }); // end ready -->
+  <!-- </script> -->
   <script type="text/javascript">
-    $(document).ready(function() {
-        $('#open').click(function() {
-            $('#login form').slideToggle(300);
-            $(this).toogleClass('close');
-        }); //end click
-    }); // end ready
+    $(document).ready(function(){
+        $('#open').toggle(
+            function() {
+                $('#login form').slideDown(300);
+                $(this).addClass('close');
+            },
+            function() {
+                $('#login form').fadeOut(600);
+                $(this).removeClass('close');
+            }
+        ); // end toogle
+    }); //end ready
   </script>
   </head>
   <body>
     <div class="wrapper">
       <div class="header">
-	    <p class="logo">JavaScript <i>&</i> jQuery <i class="mm">The<br>Missing<br>Manual</i></p>
+	    <p class="logo">JavaScript <i>&</i> jQuery
+          <i class="mm">The<br>Missing<br>Manual</i>
+        </p>
       </div>
       <div id="login">
         <p id="open">Login</p>
@@ -91,7 +107,11 @@
         </div>
       </div>
       <div class="footer">
-        <p>JavaScript &amp; jQuery: The Missing Manual, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+        <p>JavaScript &amp; jQuery: The Missing Manual, by
+          <a href="http://sawmac.com/">David McFarland</a>.
+          Published by
+          <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.
+        </p>
       </div>
     </div>
   </body>
